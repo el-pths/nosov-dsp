@@ -33,3 +33,4 @@ _This project about digital signal processing and neural networks is a school re
 ### Ссылки
 
 - текущие задачи https://github.com/el-pths/nosov-dsp/issues
+- введение в цифровые фильтры, примеры на octave/matlab https://en.wikibooks.org/wiki/Digital_Signal_Processing/Digital_Filters
