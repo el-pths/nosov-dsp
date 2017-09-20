@@ -29,3 +29,7 @@ _This project about digital signal processing and neural networks is a school re
     приемник-с-микрофона    ==>    фильтр ВЧ    ==>    fuzz-эффект    ==>    выход на наушники
 
 но по желанию можно было бы отключить фильтр, заменить приемник на генератор частоты, а выход на визуализатор.
+
+### Ссылки
+
+- текущие задачи https://github.com/el-pths/nosov-dsp/issues
