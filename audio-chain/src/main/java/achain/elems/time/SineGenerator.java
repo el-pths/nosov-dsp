@@ -49,11 +49,7 @@ public class SineGenerator extends ChainElement implements Runnable{
 	private byte[] getBytes(int weight) {
 		byte[] b = new byte[weight];
 		for(int i = 0; i < weight; i++){
-			try{
 			b[i] = bytes[i + lastB];
-			}catch (Exception e) {
-				// TODO: handle exception
-			}
 		}
 		lastB += weight;
 		if(lastB >= bytes.length){
