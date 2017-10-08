@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.Timer;
 
-public class SineGenerator extends ChainElement implements Runnable{
+public class SineGenerator extends ChainElement implements Runnable {
 	
 	private int time = 100; 	
 	private int amplitude = 10000; 
@@ -15,7 +15,7 @@ public class SineGenerator extends ChainElement implements Runnable{
 	public int lastB = 0;
 
     public void run() {
-    	bytes = new byte[(int) (SAMPLE_RATE * BYTES_PER_SAMPLE * time/1000)];
+    	bytes = new byte[(int) (SAMPLE_RATE * BYTES_PER_SAMPLE * time / 1000)];
         byte[] b = new byte[BYTES_PER_SAMPLE];
         Timer timer = new Timer(time, new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
