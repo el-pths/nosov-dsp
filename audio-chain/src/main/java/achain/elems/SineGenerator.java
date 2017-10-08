@@ -59,6 +59,6 @@ public class SineGenerator extends ChainElement implements Runnable{
 	}
 
 	public void nextValue(int value) {
-        throw new UnsupportedOperationException("Change this text.");
+        throw new UnsupportedOperationException("Generator needs not any next value!");
 	}
 }
