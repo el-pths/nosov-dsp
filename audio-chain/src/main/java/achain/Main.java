@@ -10,8 +10,9 @@ public class Main {
         Repeater rep = new Repeater();
         AmpMeter amp = new AmpMeter();
         Playback plb = new Playback();
-        sin.addFollower(rep);
-        rep.addFollower(plb);
+        FuzzBox fuz = new FuzzBox();
+        sin.addFollower(fuz);
+        fuz.addFollower(plb);
         //rep.addFollower(amp);
         sin.start();
         //mic.start();
