@@ -7,14 +7,16 @@ public class Main {
     public static void main(String... args) {
         //Microphone mic = new Microphone();
         SineGenerator sin = new SineGenerator();
-        FileWriter writer = new FileWriter();
+        //FileWriter writer = new FileWriter();
+        Plotter plotter = new Plotter();
         //Repeater rep = new Repeater();
         //AmpMeter amp = new AmpMeter();
         Playback plb = new Playback();
         FuzzBox fuz = new FuzzBox();
         sin.addFollower(fuz);
-        fuz.addFollower(writer);
-        writer.addFollower(plb);
+        fuz.addFollower(plotter);
+        plotter.addFollower(plb);
+        //writer.addFollower(plb);
         //rep.addFollower(amp);
         sin.start();
         //mic.start();
