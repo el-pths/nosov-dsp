@@ -8,7 +8,7 @@ public class WavWriter {
     static final int HEADER_SIZE = 44;
     
     public void save(String name, int freq, List<Integer> samples) {
-        byte data[] = new byte[HEADER_SIZE + samples.size()];
+        byte[] data = new byte[HEADER_SIZE + samples.size()];
         fillHeader(freq, data, samples.size());
         int i = HEADER_SIZE;
         double coeff = 127 / (deviation(samples) * 2);

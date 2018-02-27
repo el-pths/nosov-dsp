@@ -11,7 +11,7 @@ public class MicrophoneLevelTest {
         AmpMeter amp = new AmpMeter();
         mic.addFollower(amp);
         mic.start();
-        Thread.sleep(10000);
+        Thread.sleep(3100);
     }
 
 }
