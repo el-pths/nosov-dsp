@@ -2,8 +2,8 @@ package achain.elems;
 
 public class FuzzBox extends ChainElement {
 
-    private int maxOverdriveValue = 1000;
-    private double overdriveCorection = 0.3;
+    private int maxOverdriveValue = 2000;
+    private double overdriveCorection = 0.4;
     private int maxDistortionValue = 5000;
     
     private boolean overdrive = true;
@@ -12,10 +12,10 @@ public class FuzzBox extends ChainElement {
     public void nextValue(int value) {
         if (overdrive) {
             if (value > maxOverdriveValue) {
-                value = (int) (Math.round((value - maxOverdriveValue) * overdriveCorection) + value);
+                value = (int) (Math.round(value - (value - maxOverdriveValue) * overdriveCorection));
             }
             if (value < (-1) * maxOverdriveValue) {
-                value = (int) (Math.round((value + maxOverdriveValue) * overdriveCorection) + value);
+                value = (int) (Math.round(value - (value + maxOverdriveValue) * overdriveCorection));
             }
         }
         if (distortion) {
