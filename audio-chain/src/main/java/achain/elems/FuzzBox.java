@@ -3,11 +3,11 @@ package achain.elems;
 public class FuzzBox extends ChainElement {
 
     private int maxOverdriveValue = 2000;
-    private double overdriveCorection = 0.4;
+    private double overdriveCorection = 0.8;
     private int maxDistortionValue = 5000;
     
     private boolean overdrive = true;
-    private boolean distortion = false;
+    private boolean distortion = true;
     
     public void nextValue(int value) {
         if (overdrive) {

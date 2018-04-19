@@ -18,6 +18,10 @@ public class Plotter extends ChainElement {
     private int curPos;
     
     private int max, min;
+    
+    private boolean dinamicalLimits = true;
+    
+    private int limits = 10000;
 
     public Plotter() {
         values = new int[redrawIntervalSec * SAMPLE_RATE];
@@ -26,14 +30,21 @@ public class Plotter extends ChainElement {
     
     private void reset() {
         curPos = 0;
-        max = Integer.MIN_VALUE;
-        min = Integer.MAX_VALUE;
+        if(dinamicalLimits){
+        	max = Integer.MIN_VALUE;
+        	min = Integer.MAX_VALUE;
+        }
     }
 
     public void nextValue(int value) {
         values[curPos] = value;
-        min = Math.min(min, value);
-        max = Math.max(max, value);
+        if(dinamicalLimits){
+        	min = Math.min(min, value);
+        	max = Math.max(max, value);
+        }else{
+        	max = limits;
+        	min = (-1)*limits;
+        }
         curPos += 1;
         if (curPos == values.length) {
             drawing.max = max;
