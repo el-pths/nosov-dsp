@@ -6,8 +6,8 @@ public class FuzzBox extends ChainElement {
     private double overdriveCorection = 0.8;
     private int maxDistortionValue = 5000;
     
-    private boolean overdrive = true;
-    private boolean distortion = true;
+    private boolean overdrive = false;
+    private boolean distortion = false;
     
     public void nextValue(int value) {
         if (overdrive) {

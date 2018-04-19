@@ -13,10 +13,12 @@ public class Main {
         //AmpMeter amp = new AmpMeter();
         Playback plb = new Playback();
         FuzzBox fuz = new FuzzBox();
+        Delay del = new Delay();
         //Amplifer amp = new Amplifer();
         sin.addFollower(fuz);
         //mic.addFollower(fuz);
-        fuz.addFollower(plotter);
+        fuz.addFollower(del);
+        del.addFollower(plotter);
         //amp.addFollower(plotter);
         plotter.addFollower(plb);
         //writer.addFollower(plb);
