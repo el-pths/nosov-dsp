@@ -7,6 +7,7 @@ public class Main {
     public static void main(String... args) {
         Microphone mic = new Microphone();
         SineGenerator sin = new SineGenerator();
+        WavPlayer wpl = new WavPlayer();
         //FileWriter writer = new FileWriter();
         Plotter plotter = new Plotter();
         //Repeater rep = new Repeater();
@@ -15,7 +16,8 @@ public class Main {
         FuzzBox fuz = new FuzzBox();
         Delay del = new Delay();
         //Amplifer amp = new Amplifer();
-        sin.addFollower(fuz);
+        //sin.addFollower(fuz);
+        wpl.addFollower(fuz);
         //mic.addFollower(fuz);
         fuz.addFollower(del);
         del.addFollower(plotter);
@@ -23,8 +25,9 @@ public class Main {
         plotter.addFollower(plb);
         //writer.addFollower(plb);
         //rep.addFollower(amp);
-        sin.start();
+        //sin.start();
         //mic.start();
+        wpl.start();
     }
 
 }

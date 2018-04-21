@@ -2,10 +2,10 @@ package achain.elems;
 
 public class Delay extends ChainElement {
 	
-	private int repeat = 3;
+	private int repeat = 1;
 	private int i = 0;
 	private int k = 2;
-	private int time = 20035;
+	private int time = 19873;
 	private int[] values = new int[time*repeat];
 
 	@Override
